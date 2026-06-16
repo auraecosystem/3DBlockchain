@@ -73,8 +73,82 @@ We split it into:
 ⸻
 
 🧾 SPLIT OPENSCAD VERSION
+
+```mermaid
+flowchart TD
+%% =========================
+%% DESIGN LAYER
+%% =========================
+A[Cyberpunk Blockchain Core Design] --> B[OpenSCAD / CAD Model]
+B --> C[3D Printed Structure STL]
+
+%% =========================
+%% PHYSICAL LAYER
+%% =========================
+C --> D[3D Printed Device Body]
+
+D --> E1[Base Housing]
+D --> E2[Core Sphere Diffuser]
+D --> E3[Node Towers]
+D --> E4[LED Ring Slot]
+
+%% =========================
+%% ELECTRONICS LAYER
+%% =========================
+E1 --> F[ESP32 Microcontroller]
+E1 --> G[Battery + TP4056 Charger]
+E1 --> H[USB-C Power Input]
+
+E2 --> I[WS2812 LED Ring]
+
+%% =========================
+%% FIRMWARE LAYER
+%% =========================
+F --> J[ESP32 Firmware]
+J --> K[LED Pulse Engine]
+J --> L[WiFi Connection Module]
+
+%% =========================
+%% NETWORK / BLOCKCHAIN LAYER
+%% =========================
+L --> M[FastAPI Backend]
+M --> N[Fadaka Blockchain Node]
+N --> O[Transaction Events]
+N --> P[Mining Events]
+N --> Q[Wallet Activity]
+
+%% =========================
+%% EVENT STREAM
+%% =========================
+O --> R[WebSocket Event Stream]
+P --> R
+Q --> R
+
+%% =========================
+%% DEVICE RESPONSE
+%% =========================
+R --> F
+F --> K
+
+%% =========================
+%% PHYSICAL OUTPUT BEHAVIOR
+%% =========================
+K --> S[LED Colors]
+S --> S1[Green = Success TX]
+S --> S2[Red = Failed TX]
+S --> S3[Blue Pulse = Network Activity]
+S --> S4[Fast Blink = Mining]
+
+%% =========================
+%% FINAL FORM
+%% =========================
+S --> T[Living Blockchain Core Device]
+```
+
+
+
+
 ```scad
-$fn = 90;
 // =====================
 // CORE MODULE
 // =====================
