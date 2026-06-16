@@ -1,0 +1,23 @@
+FADAKA CRYPTO CORE PCB SCHEMATIC
+=================================
+
+POWER:
+- USB-C 5V input
+- LiPo battery input (optional)
+- Voltage regulator 3.3V
+
+MCU:
+- ESP32-WROOM-32
+
+SECURITY:
+- ATECC608A secure element (I2C)
+
+STORAGE:
+- SPI Flash (or internal ESP32 SPIFFS)
+
+OUTPUT:
+- WS2812 LED ring (GPIO control)
+
+COMMUNICATION:
+- WiFi (ESP32 internal)
+- USB serial debugging
