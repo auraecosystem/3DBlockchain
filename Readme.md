@@ -6,7 +6,7 @@ A hardware cryptographic identity system powered by ESP32, ATECC608A, and Web4 a
 
 ## 🧠 SYSTEM ARCHITECTURE
 
-```stl
+```mmd
 flowchart TD
 A[Identity Layer .p12] --> B[FastAPI KMS]
 B --> C[ESP32 Core Device]
