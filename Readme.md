@@ -16,6 +16,7 @@ C --> F[P2P Blockchain Network]
 ```
 
 
+<img width="1536" height="1024" alt="9D18B91F-399F-41C3-BD26-586F646629B5" src="https://github.com/user-attachments/assets/414369f4-1686-418a-a520-042f61dc20b2" />
 
 
 ---
