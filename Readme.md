@@ -53,4 +53,4 @@ Just say:
 👉 “P2P network”  
 👉 “manufacturing BOM”
 
-and I’ll push this from **design → buildable hardware system**.
+![demo.scad](https://chatgpt.com/s/m_6a30ce2aed5081919b91dc03342fac6c) • Made with ChatGPT
