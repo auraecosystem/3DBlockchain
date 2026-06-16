@@ -1,9 +1,18 @@
 ```mermaid
-- ATECC608A (secure key element optional but recommended)
+flowchart TD
+A[Identity Layer .p12] --> B[FastAPI KMS]
+B --> C[ESP32 Core Device]
+C --> D[ATECC608A Secure Element]
+C --> E[LED Status Ring]
+C --> F[P2P Blockchain Network]
+```
+-->  ATECC608A (secure key element optional but recommended)
 - WS2812 LED ring (network status)
 - USB-C power + data
 - LiPo battery (optional mobile mode)
 - Flash storage (SPIFFS / external EEPROM
+-
+  ```mermaid
 
         [ LED RING ]
       ---------------------
@@ -16,6 +25,10 @@
      |                   |
       ---------------------
           USB-C PORT
+```
+```
+```stl
+
                  ┌──────────────────────────┐
                  │  Web4 / FastAPI KMS      │
                  │  - sign / verify         │
@@ -38,4 +51,4 @@
                    └───────┬───────┘
                            ▼
                 P2P Blockchain - ESP32-WROOM (main processor)
-```
+
