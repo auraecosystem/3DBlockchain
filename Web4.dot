@@ -1,0 +1,56 @@
+graph WEB4_CYBERPUNK {
+
+    layout=sfdp;
+    overlap=false;
+    splines=true;
+    sep=1.4;
+    repulsiveforce=2;
+
+    node [
+        shape=box,
+        style="filled,rounded",
+        fillcolor="#111827",
+        fontcolor="white",
+        color="#00ffff"
+    ];
+
+    edge [
+        color="#00ffff",
+        penwidth=1.2
+    ];
+
+    User        [label="USER"];
+    CDN         [label="EDGE CDN"];
+    Nginx       [label="NGINX"];
+    FastAPI     [label="FASTAPI GATEWAY"];
+    AIEngine    [label="AI ENGINE"];
+    Wallet      [label="SWIFT WALLET"];
+    Blockchain  [label="FADAKA CHAIN"];
+    Redis       [label="REDIS CACHE"];
+    Postgres    [label="POSTGRES DB"];
+    WebSocket   [label="REALTIME HUB"];
+    TLSMesh     [label="P2P TLS MESH"];
+    Storage     [label="OBJECT STORAGE"];
+    Kubernetes  [label="K8S CLUSTER"];
+    Docker      [label="DOCKER"];
+    GitHub      [label="CI/CD"];
+
+    User -- CDN -- Nginx -- FastAPI;
+
+    FastAPI -- AIEngine;
+    FastAPI -- Wallet;
+    FastAPI -- Blockchain;
+    FastAPI -- Redis;
+    FastAPI -- Postgres;
+    FastAPI -- WebSocket;
+
+    Blockchain -- TLSMesh;
+
+    GitHub -- Docker -- Kubernetes;
+
+    Kubernetes -- FastAPI;
+    Kubernetes -- Redis;
+    Kubernetes -- Postgres;
+
+    Storage -- AIEngine;
+}
