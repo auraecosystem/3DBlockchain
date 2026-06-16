@@ -1,0 +1,15 @@
+         USB-C
+           │
+           ▼
+     Power Management
+           │
+   ┌───────┴────────┐
+   ▼                ▼
+ESP32           LED RING
+   │                │
+   ▼                │
+ATECC608A (I2C)    │
+   │                │
+   └──────┬─────────┘
+          ▼
+     Secure Signing Core
